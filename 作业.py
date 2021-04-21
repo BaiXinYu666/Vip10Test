@@ -20,7 +20,6 @@ print(maomi)
 3）每次吃东西体重会增加1公斤
 4）小美的体重是45.0公斤'''
 
-
 # 定义类:小明
 '''class xiaoming():
     # 属性：爱吃东西，爱跑步 体重75 跑步会减，吃东西会增
@@ -55,32 +54,35 @@ print(yundong)'''
    餐桌：占1.5平米
 3）.将以上三件家具添加到房子中
 4）.打印房子时，要求输出:户型，总面积，剩余面积，家具名称列表'''
+
+
 class jj():
     def __init__(self, name, mj):
         self.name = name
         self.mj = mj
 class house():
-    def __init__(self,huxing,mj):
+    def __init__(self, huxing, mj):
         self.huxing = huxing
         self.mj = mj
         self.shengyu = mj
         self.jiayulist = []
     def __str__(self):
-        return f'户型为{self.huxing},总面积为{self.mj},家具有{self.jiayulist}'
-    def add(self,jiaju):
-        if self.shengyu >=self.mj:
-            self.jiayulist.append(jiaju.name)
-        else:
-            continue
-        self.shengyu -= jiaju.mj
-jia =jj('床',4)
-fangzi = house('四合院',100)
-print(fangzi)
+        return f'户型为{self.huxing},总面积为{self.mj},剩余面积为{self.shengyu},家具有{self.jiayulist}'
 
-def b():
-    a = []
-    for b in range(10):
-        if b>5:
-            a.append(b)
+    def add(self, jiaju):
+        if self.shengyu >= jiaju.mj:
+            self.jiayulist.append(jiaju.name)
+            self.shengyu -= jiaju.mj
         else:
-            continue
+            print('放不下了')
+bad = jj('床', 4)
+jia1 = house('四合院', 100)
+print(jia1)
+jia1.add(bad)
+print(jia1)
+sofa = jj('沙发',2)
+jia1.add(sofa)
+print(jia1)
+cz = jj('餐桌',1.5)
+jia1.add(cz)
+print(jia1)
