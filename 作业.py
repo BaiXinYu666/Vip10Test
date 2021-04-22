@@ -21,29 +21,47 @@ print(maomi)
 4）小美的体重是45.0公斤'''
 
 # 定义类:小明
-'''class xiaoming():
+'''class mingz():
     # 属性：爱吃东西，爱跑步 体重75 跑步会减，吃东西会增
-    def __init__(self, eat, yundong):
-        self.eat = eat
-        self.yundong = yundong
+    def __init__(self, name, gansm):
+        self.name = name
+        self.gansm = gansm
         self.tizhong = int(75)
-    def tizhong1(self):
-        print(f'小明爱{self.eat},小明爱{self.yundong}')
-    def tizhong2(self):
-        if self.yundong:
-            self.tizhong  -=1
-        elif self.eat:
-            self.tizhong +=2
-    def __str__(self):
-        return  f'体重为{self.tizhong}'
-#创建对象
-xmtz = xiaoming('吃','运动')
-xmtz.tizhong1()
-print(xmtz)
-yundong = xiaoming('吃','运动')
-yundong.tizhong2()
-print(yundong)'''
+        self.tizhong2 = int(45)
 
+    def chi(self):
+        if self.name == '小明':
+            self.tizhong += 1
+        elif self.name == '小红':
+            self.tizhong2 += 1
+
+    def ydd(self):
+        if self.name == '小明':
+            self.tizhong -= 2
+        elif self.name == '小红':
+            self.tizhong2 -= 2
+
+    def __str__(self):
+        if self.name == '小明':
+            return f'我的名字叫{self.name},{self.gansm}后的体重为{self.tizhong}'
+        elif self.name == '小红':
+            return f'我的名字叫{self.name},{self.gansm}后的体重为{self.tizhong2}'
+
+
+xmm = mingz('小明', '运动')
+xmm2 = mingz('小明', '吃')
+xmm2.chi()
+xmm.ydd()
+print(xmm)
+print(xmm2)
+
+xhh = mingz('小红', '运动')
+xhh2 = mingz('小红', '吃')
+xhh2.chi()
+xhh.ydd()
+print(xhh)
+print(xhh2)
+'''
 '''3、摆放家具
 需求：
 1）.房子有户型，总面积和家具名称列表
@@ -55,8 +73,7 @@ print(yundong)'''
 3）.将以上三件家具添加到房子中
 4）.打印房子时，要求输出:户型，总面积，剩余面积，家具名称列表'''
 
-
-class jj():
+'''class jj():
     def __init__(self, name, mj):
         self.name = name
         self.mj = mj
@@ -86,3 +103,30 @@ print(jia1)
 cz = jj('餐桌',1.5)
 jia1.add(cz)
 print(jia1)
+'''
+
+'''4.士兵开枪
+需求：
+1）.士兵瑞恩有一把AK47
+2）.士兵可以开火(士兵开火扣动的是扳机)
+3）.枪 能够 发射子弹(把子弹发射出去)
+4）.枪 能够 装填子弹 --增加子弹的数量
+'''
+
+
+# 类 ：士兵#属性：有ak#动作：开火
+# 类:枪 属性：有子弹  动作：装子弹
+
+class shibin():
+    def __int__(self,q):
+        self.q = q
+    def kaihui(self):
+        print('biubiubiu')
+class qiang():
+    def __int__(self,zidan):
+        self.zidan = zidan
+    def zhuang(self):
+
+aa = shibin()
+aa.kaihui()
+print(aa)
