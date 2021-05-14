@@ -90,24 +90,24 @@ duixaing.dongci()
 print(duixaing)'''
 
 #房子类  属性：面积  剩余面积  家具列表
-# class jiaju():
-#     def __init__(self,jiajuname,mianji):
-#         self.jiajuname=  jiajuname
-#         self.mianji = mianji
-# class fangzi():
-#     def __str__(self):
-#         return f'面积是{self.mianji},剩余面积是{self.shengyumianji}'
-#     def __init__(self,mianji):
-#         self.mianji = mianji
-#         self.shengyumianji = mianji
-#         self.list = []
-#     def rongna(self):
-#         if self.shengyumianji>self.mianji:
-#             self.list.append(self.jiajuname)
-#         else:
-#             print('空间不足')
-# bb = fangzi(100)
-# bb.rongna()
+class jiaju():
+    def __init__(self,jiajuname,mianji):
+        self.jiajuname=  jiajuname
+        self.mianji = mianji
+class fangzi():
+    def __str__(self):
+        return f'面积是{self.mianji},剩余面积是{self.shengyumianji}'
+    def __init__(self,mianji):
+        self.mianji = mianji
+        self.shengyumianji = mianji
+        self.list = []
+    def rongna(self):
+        if self.shengyumianji>self.mianji:
+            self.list.append(self.jiajuname)
+        else:
+            print('空间不足')
+bb = fangzi(100)
+bb.rongna()
 
 
 

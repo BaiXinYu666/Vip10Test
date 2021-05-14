@@ -112,21 +112,53 @@ print(jia1)
 3）.枪 能够 发射子弹(把子弹发射出去)
 4）.枪 能够 装填子弹 --增加子弹的数量
 '''
-
-
 # 类 ：士兵#属性：有ak#动作：开火
 # 类:枪 属性：有子弹  动作：装子弹
-
-class shibin():
-    def __int__(self,q):
+# 士兵类
+'''class shibin():
+    def __init__(self,name,q):
+        self.name = name
         self.q = q
-    def kaihui(self):
-        print('biubiubiu')
+    def __str__(self):
+        return  f'我是一名{self.name}我有{self.q}'
+# 枪类
 class qiang():
-    def __int__(self,zidan):
-        self.zidan = zidan
-    def zhuang(self):
-
-aa = shibin()
-aa.kaihui()
+    def __init__(self,name,kh,z):
+        self.name = name
+        self.kh = kh
+        self.z = z
+    def __str__(self):
+        return  (f'ak里有{self.name},我会{self.kh},没子弹了我还会{self.z}')
+aa = shibin('士兵','ak')
 print(aa)
+zid = qiang('子弹','biubiubiu','装子弹')
+print(zid)
+'''
+
+
+'''2、小明爱跑步，爱吃东西。
+1）小明体重75.0公斤
+2）每次跑步会减肥0.5公斤
+3）每次吃东西体重会增加1公斤
+4）小美的体重是45.0公斤'''
+
+class mingz():
+    def __init__(self, name, tz):
+        self.name = name
+        self.tz = tz
+    def chi(self):
+        self.tz +=1
+        print(f'{self.name}吃东西后的体重是{self.tz}')
+    def yd(self):
+        self.tz -=0.5
+        print(f'{self.name}运动后的体重是{self.tz}')
+
+xm = mingz('小明',75)
+xm.chi()
+xm.yd()
+
+xh = mingz('小红',45)
+xh.chi()
+xh.yd()
+
+
